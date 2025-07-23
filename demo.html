@@ -1,32 +1,32 @@
 <script src="./.svelte-kit/web-components/next.umd.js"></script>
 
 <style>
-	body {
-		font-family: monospace;
-	}
+  body {
+    font-family: monospace;
+  }
 
-	.rows {
-		display: flex;
-		flex-direction: column;
-		gap: 5px;
-	}
+  .rows {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
 </style>
 
 <div class="rows">
-	<div>
-		<next-hello class="first" name="web component #1" />
-	</div>
-	<div>
-		<next-hello class="second" name="web component #2" />
-	</div>
-	<div class="pre">
-		<div>window.Next.bridge.name = 'something else'</div>
+  <div>
+    <next-hello class="first" name="web component #1" />
+  </div>
+  <div>
+    <next-hello class="second" name="web component #2" />
+  </div>
+  <div class="pre">
+    <div>window.Next.bridge.name = 'something else'</div>
     <div>window.first.name = 'hello'</div>
     <div>window.second.name = 'hello';</div>
-	</div>
+  </div>
 </div>
 
 <script>
-	window.first = document.querySelector('.first');
-	window.second = document.querySelector('.second');
+  window.first = document.querySelector('.first');
+  window.second = document.querySelector('.second');
 </script>
