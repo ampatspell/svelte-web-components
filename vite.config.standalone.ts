@@ -9,6 +9,11 @@ export default defineConfig(({ mode }) => ({
       },
     }),
   ],
+  resolve: {
+    alias: {
+      $lib: 'src/lib',
+    },
+  },
   build: {
     minify: mode === 'production',
     sourcemap: mode !== 'production' ? 'inline' : false,
